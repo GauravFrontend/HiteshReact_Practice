@@ -1,0 +1,18 @@
+Store file
+import configure store from redux
+import createSlice in todoslice.js and nanoid(for random id's)
+
+create intialState(jaha sari values store hongi)
+then createSlice {
+    yha pr slice ka nam,
+    uske baadd jo bhi functionalities deni hai wo 
+    (state ,action) => {}, ese
+    state ka mtlb ki abhi kya kya values hai, abhi kya situation hai 
+    actions data mai changes krne k liye, (action.payload)taget krne k liye
+}
+export const {addTodo,removeTodo} = todoSlice.actions
+export default todoSlice.reducer
+import todoReducer from "../features/todo/todoSlice"
+export const store = configureStore({
+    reducer:todoReducer`ye add kiya import krne k baad`
+})
