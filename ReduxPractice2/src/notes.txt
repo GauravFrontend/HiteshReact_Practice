@@ -1,0 +1,35 @@
+step1
+configure store
+step2
+createSlice(reducer)
+            step1
+            create initialState
+            step2
+            create slice = name and initialState are important, then reducers
+            step3
+            In reducer
+                    step1: Properties and functions
+                    reducers:{
+                         addTodo:() => {},
+                         removeTodo:() => {}
+                    }
+                    step2:
+                    2 things are provided by slice (state,action)
+                    state: current situation current value
+                    action: values milti hai changes krne k liye ------ action.payload
+                    step3:
+                    export all functionalities
+                    export const {} = todoslice.actions
+                    step4:
+                    export default todoslice.reducer
+                    step5:
+                    import todoReducer from todoslice.js // isme doubt hai 
+
+step3:
+    create components : addtodo : todo
+    import usedispatch from reactredux
+        dispatch reducer ko use krke store mai values change krta hai
+
+step4:
+    display items 
+    
