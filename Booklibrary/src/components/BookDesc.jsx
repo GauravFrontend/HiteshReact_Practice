@@ -5,12 +5,18 @@ import { useSelector } from 'react-redux';
 
 const BookDetails = () => {
   const { bookId } = useParams();
-  const book = useSelector((state) => state.Books)
-  console.log(book[1])
+  const book = useSelector((state) => state.books)
+
+const bookObject = book.find((item) => item.bookId === bookId)
+
+console.log(bookObject.bookDetails)
+
+
+
 
   return (
     <div>
-      <h2>Book Details</h2>
+      <h2>Book Details : <br /> {bookObject.bookDetails}</h2>
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit"
 
 const initialState = {
-    Books: [
+    books: [
         {
-            bookId:10,
+            bookId:"10",
             bookName: "book1",
             bookDetails: "hello i am book 1"
         }
@@ -20,7 +20,7 @@ export const bookSlice = createSlice({
                 bookName: action.payload.bname,
                 bookDetails: action.payload.bdetails
             }
-            state.Books.push(book)
+            state.books.push(book)
         },
         removeBook: () => { }
     }
