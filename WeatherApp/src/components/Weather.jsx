@@ -12,7 +12,7 @@ const Weather = () => {
                         <input onChange={(e) => setQuery(e.target.value)} type="text" />
                         <button onClick={(e) => {
                             e.preventDefault()
-                            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=cacc368769c40689ef61426ae3d18e2b`)
+                            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=cacc368769c4`)
                                 .then((res) => res.json())
                                 .then((res) => setResponse(res))
                                 console.log(response)
