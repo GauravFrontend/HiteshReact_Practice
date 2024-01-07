@@ -1,10 +1,11 @@
 import conf from "../conf/conf.js"
 
-import { Clint, Account, ID } from "appwrite"
+import { Client, Account, ID } from "appwrite"
+
 
 
 export class AuthService {
-    client = new Clint();
+    client = new Client();
     account;
 
     constructor() {
@@ -56,4 +57,4 @@ export class AuthService {
 
 const authService = new AuthService();
 
-export default AuthService;
+export default authService;
