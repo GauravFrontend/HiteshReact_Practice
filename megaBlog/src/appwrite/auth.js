@@ -1,3 +1,4 @@
+import conf from "../conf/conf";
 import { Client, Account, ID } from "appwrite"
 //class , constructor
 export class AuthService {
@@ -41,6 +42,13 @@ export class AuthService {
         return null;
     }
 
+    async logout() {
+        try {
+            await this.account.deleteSessions();
+        } catch (error) {
+            console.log("error in logut")
+        }
+    }
 
 
 
@@ -48,5 +56,5 @@ export class AuthService {
 
 const authService = new AuthService();
 
-export default AuthService
+export default authService
 
