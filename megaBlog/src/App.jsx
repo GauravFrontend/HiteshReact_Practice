@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux"
 import authService from "./appwrite/auth"
 import {login,logout} from "./store/authSlice"
 import { Footer, Header } from './components'
+import { Outlet } from 'react-router-dom'
 
 
 
@@ -31,7 +32,7 @@ function App() {
    <div className='w-full block' >
     <Header/>
     <main>
-    <h1>outlet</h1>
+    <Outlet/>
     </main>
     <Footer/>
    </div>
