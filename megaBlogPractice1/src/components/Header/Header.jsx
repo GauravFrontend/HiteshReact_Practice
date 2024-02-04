@@ -1,10 +1,11 @@
 import React from 'react'
 import {useSelector} from "react-redux"
 import Logoutbtn from './Logoutbtn'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
     const authStatus = useSelector((state) => state.auth.status )
-
+    const navigate = useNavigate();
 
 
     const navItems = [
@@ -44,7 +45,10 @@ const Header = () => {
         {navItems.map((item) => (
             item.active?(
                 <li className='mx-4' key={item.name}>
+                    <button className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
+                    onClick={() => navigate(item.slug) } >
                     {item.name}
+                    </button>
                 </li>
             ):null
         ))}
