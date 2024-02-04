@@ -12,21 +12,19 @@ const LoginC = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const joInputBoxMaiValueAai = async (data) => {
+  const login = async(data) => {
     setError("")
     try {
         const session = await authService.login(data)
         if (session) {
             const userData = await authService.getCurrentUser()
-            if (userData) {
-              dispatch(authLogin(userData))
-              navigate("/")
-            }
+            if(userData) dispatch(authLogin(userData));
+            navigate("/")
         }
     } catch (error) {
         setError(error.message)
     }
-  }
+}
 
 
 
@@ -34,7 +32,7 @@ const LoginC = () => {
     <>
       <div>mai login hu</div>
       {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit(joInputBoxMaiValueAai)}>
+      <form onSubmit={handleSubmit(login)}>
       <Input type="text" label="Email: " placeholder="Enter your email"
         {...register("email", {
           required: true,
