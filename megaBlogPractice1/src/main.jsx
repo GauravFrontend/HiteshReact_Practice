@@ -10,6 +10,7 @@ import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
 import Signup from './pages/Signup.jsx'
 import AllPosts from './pages/AllPosts.jsx'
+import AddPosts from './pages/AddPosts.jsx'
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path:"/all-posts",
         element:<AllPosts/>
+      },
+      {
+        path:"/add-post",
+        element:<AddPosts/>
       },
 
     ]
