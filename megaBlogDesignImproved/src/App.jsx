@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Login from './components/Login'
 import PostCard from './components/PostCard'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,7 @@ function App() {
   return (
    <>
    <Header/>
-   <PostCard/>
+   <Outlet/>
    <Footer/>
    </>
   )
