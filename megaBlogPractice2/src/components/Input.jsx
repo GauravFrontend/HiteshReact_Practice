@@ -3,6 +3,7 @@ import React from 'react'
 const Input = ({
     type = "text",
     label,
+    value="",
     className="",
     ...props
 },ref) => {
@@ -14,6 +15,7 @@ const Input = ({
             </label>
         )}
         <input
+        value={value}
         className={className}
         type={type}
         ref={ref}

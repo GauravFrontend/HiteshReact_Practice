@@ -13,24 +13,24 @@ const Login = () => {
     
 
     const login = async (data) => {
-        if (data) {
+        try {
             const session = await authService.login(data)
             if (session) {
                 const userData = await authService.getCurrentUser()
-                if (userData) {
-                    dispatch(authLogin(userData))
+                if(userData) dispatch(authLogin(userData));
                 navigate("/")
-                }
             }
+        } catch (error) {
+            console.log(error.message)
         }
     }
 
   return (
     <form onSubmit={handleSubmit(login)} className='flex flex-col gap-4' >
-        <Input label="Email"
+        <Input value="one@gmail.com" label="Email"
         {...register("email",{required:true})}
         className="bg-yellow-200 w-60 rounded-md " />
-        <Input label="Password" 
+        <Input value="11111111" label="Password" 
         {...register("password",{required:true})}
         className="bg-yellow-200 w-60 rounded-md " />
         <button type='submit' className='bg-purple-400 rounded-md w-20 h-8 ' >Submit</button>

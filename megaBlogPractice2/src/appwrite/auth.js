@@ -46,6 +46,7 @@ export class AuthService {
         try {
             await this.account.deleteSessions();
         } catch (error) {
+            console.log(error.message)
             console.log("error in logut")
         }
     }
