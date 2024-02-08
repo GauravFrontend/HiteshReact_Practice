@@ -1,8 +1,9 @@
 import React from 'react'
+import aom from "../Logo/"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <img src="../Logo/flashblogs-2.png" className="" alt="Flowbite Logo" />
   )
 }
 
