@@ -1,11 +1,9 @@
 import React, { useId } from 'react'
 
-const Input = ({
-    label,
+const Input = ({label,
     className="",
     type="text",
-    ...props
-},ref) => {
+    ...props},ref) => {
 
     const id = useId();
 
