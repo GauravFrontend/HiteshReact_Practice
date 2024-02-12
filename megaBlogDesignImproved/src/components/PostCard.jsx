@@ -10,7 +10,7 @@ const PostCard = ({
 }) => {
     return (
         <>
-            <Link className='h-auto'  to={`/post/${$id}`} >
+            <Link className='aspect-square object-contain '  to={`/post/${$id}`} >
                 <div className="max-w-sm  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
                     <div className="max-w-sm max-h-72 overflow-hidden">

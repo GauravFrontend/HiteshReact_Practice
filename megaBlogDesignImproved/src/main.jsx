@@ -9,6 +9,7 @@ import store from './store/store.js'
 import {Provider} from "react-redux"
 import PostForm from './components/PostForm.jsx'
 import AddPost from './pages/AddPost.jsx'
+import Post from './components/Post.jsx'
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
       {
         path:"/add-post",
         element:<AddPost/>
-      }
+      },
+      {
+          path: "/post/:slug",
+          element: <Post/>,
+      },
     ]
   }
 ])
