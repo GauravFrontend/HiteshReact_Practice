@@ -10,6 +10,7 @@ import {Provider} from "react-redux"
 import PostForm from './components/PostForm.jsx'
 import AddPost from './pages/AddPost.jsx'
 import Post from './components/Post.jsx'
+import EditPost from './pages/EditPost.jsx'
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
           path: "/post/:slug",
           element: <Post/>,
+      },
+      {
+          path: "/edit-post/:slug",
+          element: <EditPost/>,
       },
     ]
   }
