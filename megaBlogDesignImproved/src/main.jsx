@@ -11,6 +11,7 @@ import PostForm from './components/PostForm.jsx'
 import AddPost from './pages/AddPost.jsx'
 import Post from './components/Post.jsx'
 import EditPost from './pages/EditPost.jsx'
+import AllPost from './pages/AllPost.jsx'
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
           path: "/edit-post/:slug",
           element: <EditPost/>,
       },
+      {
+        path: "/all-posts",
+        element: <AllPost/>,
+    },
     ]
   }
 ])
