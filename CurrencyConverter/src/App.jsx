@@ -22,11 +22,15 @@ function App() {
   const convert = () => {setResult(amount*currencyInfoHookUse[to])}
 
   return (
-    <div
-        className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+    <div id="main" className='flex' >
+        <div id="left" className='w-96'  >
+        <img className='w-full h-full object-center object-cover '  src="./chai.jpg" alt="" />
+        </div>
+        <div
+        className=" w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
         style={{backgroundColor:"black"}}
     >
-        <div className="w-full">
+        <div className="w-full ">
             <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
                 <form
                     onSubmit={(e) => {
@@ -65,11 +69,12 @@ function App() {
                         />
                     </div>
                     <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
-                        Convert {from.toUpperCase}to{to.toUpperCase()}
+                        Convert {from.toUpperCase()} to {to.toUpperCase()}
                     </button>
                 </form>
             </div>
         </div>
+    </div>
     </div>
 );
 }

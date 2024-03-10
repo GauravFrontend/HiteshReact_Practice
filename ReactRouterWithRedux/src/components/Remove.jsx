@@ -7,6 +7,7 @@ const [remove, setRemove] = useState("7");
   return (
     <>
     <div id="mainAdd">
+    <h1>Remove Page</h1>
         <input type="range" value={remove} onChange={(e) => setRemove(e.target.value) } />
         {remove}
         <button onClick={(e) => {

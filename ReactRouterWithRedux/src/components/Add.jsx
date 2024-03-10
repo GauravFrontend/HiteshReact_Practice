@@ -8,6 +8,7 @@ const Add = () => {
   return (
     <>
       <div id="mainAdd">
+    <h1>Add Page</h1>
         <input type="range" value={add} onChange={(e) => setAdd(e.target.value)} />
         {add}
         <button onClick={(e) => {

@@ -1,7 +1,10 @@
 #root {
   max-width: 1280px;
+  color: black;
+  background-color: white;
   margin: 0 auto;
   padding: 2rem;
+border-radius: 30px;
   text-align: center;
 }
 
@@ -45,12 +48,13 @@
   display: flex;
   gap: 30px;
   font-size: 2vw;
-  align-items: center;
+align-items: center;
   justify-content: space-between;
 }
 #mainAdd{
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
   justify-content: space-around;
 }
